@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-hover: hsl(245, 83%, 68%);
+  --bright-blue-shadow: hsla(245, 75%, 52%, 20%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --desaturated-blue-shadow: hsla(224, 23%, 50%, 20%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pale-blue);
+  font-family: "Red Hat Display";
+  color: var(--desaturated-blue);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: repeat-x;
+}
+
+.card {
+  background-color: var(--white);
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 50px 50px -25px var(--desaturated-blue-shadow);
+}
+
+main {
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.banner {
+  height: 200px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.summary {
+  margin: 0 12px;
+
+  h1 {
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+    font-size: 28px;
+    font-weight: 900;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  border-radius: 12px;
+  padding: 16px;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.icon-container {
+}
+
+.icon {
+}
+
+.plan-info {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2px;
+  margin-bottom: 4px;
+  flex: 1;
+}
+
+.plan-title {
+  font-weight: bold;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.plan-price {
+}
+
+.change-plan {
+  font-weight: bold;
+  color: var(--bright-blue);
+
+  &:hover,
+  &:active {
+    color: var(--bright-blue-hover);
+    text-decoration: none;
+  }
+}
+
+.content button {
+  align-self: stretch;
+  height: 48px;
+  font-weight: 900;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.proceed {
+  background-color: var(--bright-blue);
+  color: var(--white);
+  box-shadow: 0 24px 20px -5px var(--bright-blue-shadow);
+  transition: background-color 0.1s;
+
+  &:hover,
+  &:active {
+    background-color: var(--bright-blue-hover);
+  }
+
+  &:focus {
+    outline: 3px solid var(--dark-blue);
+  }
+}
+
+.cancel {
+  color: var(--desaturated-blue);
+  background-color: transparent;
+  transition: color 0.1s;
+
+  &:hover,
+  &:active {
+    color: var(--dark-blue);
+  }
+
+  &:focus {
+    outline: 3px solid var(--dark-blue);
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  font-weight: bold;
+
+  a {
+    color: var(--bright-blue);
+
+    &:hover,
+    &:active {
+      color: var(--bright-blue-hover);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+
+  main {
+    margin: 12px;
+  }
+
+  .content {
+    padding: 12px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-height: 850px) {
+  .attribution {
+    position: static;
+  }
+}
