@@ -91,12 +91,6 @@ main {
   align-self: stretch;
 }
 
-.icon-container {
-}
-
-.icon {
-}
-
 .plan-info {
   text-align: start;
   display: flex;
@@ -111,9 +105,6 @@ main {
   font-weight: bold;
   color: var(--dark-blue);
   font-weight: 900;
-}
-
-.plan-price {
 }
 
 .change-plan {
